@@ -1,0 +1,6 @@
+RewriteEngine On
+Header always set Access-Control-Allow-Origin "*"
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
